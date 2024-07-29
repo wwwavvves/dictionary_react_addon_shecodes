@@ -1,0 +1,17 @@
+.input {
+  border: none;
+  border-bottom: 1px solid #0f0f0f;
+  padding: 6px;
+  width: 300px;
+}
+
+.search-btn {
+  border: 1px solid #0f0f0f;
+  padding: 6px 16px;
+  margin-left: 5px;
+}
+
+.input:focus-visible {
+  outline: none;
+  border-color: #EB4646;
+}
