@@ -4,9 +4,14 @@ import "./Search.css";
 
 export default function Search() {
   const [keyword, setKeyword] = useState(null);
+  const [loaded, setLoaded] = useState(false);
 
-  function search(response) {
-    console.log(response.data);
+  function handleResponse(response) {
+    setLoaded(true);
+
+    if (loaded) {
+      console.log(response.data.meanings);
+    }
   }
 
   function handleSubmit(event) {
@@ -15,7 +20,7 @@ export default function Search() {
     let apiKey = "68a066fb34dtb3fc9d4875c8d3bo09b6";
     let apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${keyword}&key=${apiKey}`;
 
-    axios.get(apiUrl).then(search);
+    axios.get(apiUrl).then(handleResponse);
   }
 
   function handleKeywordChange(event) {
