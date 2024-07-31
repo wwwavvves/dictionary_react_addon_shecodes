@@ -1,17 +1,14 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Search.css";
+import Result from "./Result"
 
 export default function Search() {
-  const [keyword, setKeyword] = useState(null);
-  const [loaded, setLoaded] = useState(false);
+  const [keyword, setKeyword] = useState("");
+  const [result, setResult] = useState(null);
 
   function handleResponse(response) {
-    setLoaded(true);
-
-    if (loaded) {
-      console.log(response.data.meanings);
-    }
+    setResult(response.data);
   }
 
   function handleSubmit(event) {
@@ -39,6 +36,7 @@ export default function Search() {
         />
         <input type="submit" className="search-btn" value="Search" />
       </form>
+      <Result result={result}/>
     </div>
   );
 }
