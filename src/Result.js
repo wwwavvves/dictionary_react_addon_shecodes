@@ -1,5 +1,6 @@
 import React from "react";
 import Meaning from "./Meaning";
+import "./Result.css";
 
 export default function Result(props) {
   if (!props.result) {
@@ -7,8 +8,11 @@ export default function Result(props) {
   } else {
     return (
       <div className="Result">
-        <h2>{props.result.word}</h2>
-        <h5>/{props.result.phonetic}/</h5>
+        <section className="result-word">
+          <h2>{props.result.word}</h2>
+          <h6>/{props.result.phonetic}/</h6>
+        </section>
+
         <Meaning meaning={props.result.meanings} />
       </div>
     );

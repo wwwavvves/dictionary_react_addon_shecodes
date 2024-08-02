@@ -1,10 +1,11 @@
 import "./App.css";
 import Search from "./Search";
+import "bootstrap/dist/css/bootstrap.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">Dictionary</header>
+      <header className="App-header"><a href="/">Dictionary</a></header>
       <Search />
       <footer className="Footer">
         Coded by{" "}

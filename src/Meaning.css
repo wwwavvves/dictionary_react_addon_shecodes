@@ -1,0 +1,22 @@
+.Meaning > div {
+  margin-bottom: 20px;
+  padding: 20px 20px 30px;
+  /* border: 1px solid rgb(198, 198, 198); */
+  /* border-radius: 5px; */
+  border-top: 1px solid rgb(198, 198, 198);
+  border-bottom: 1px solid rgb(198, 198, 198);
+}
+
+.part-of-speech {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.result-text {
+  color: var(--red);
+}
+
+.result-definition {
+    margin: 5px 0 0 20px
+}
+

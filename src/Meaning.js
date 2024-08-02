@@ -1,6 +1,7 @@
 import React from "react";
-import Example from "./Example"
+import Example from "./Example";
 import Synonyms from "./Synonyms";
+import "./Meaning.css";
 
 export default function Meaning(props) {
   return (
@@ -8,12 +9,12 @@ export default function Meaning(props) {
       {props.meaning.map(function (meaning, index) {
         return (
           <div key={index}>
-            <p>
-              <strong>{meaning.partOfSpeech}</strong> <br />
-              <strong>Definition:</strong> {meaning.definition} <br />
-              <Example example={meaning.example} />
-              <Synonyms synonyms={meaning.synonyms} />
-            </p>
+            <div className="part-of-speech">
+              <strong>{meaning.partOfSpeech}</strong>
+            </div>
+            <div className="result-text result-definition">{meaning.definition}</div>
+            <Example example={meaning.example} />
+            <Synonyms synonyms={meaning.synonyms} />
           </div>
         );
       })}
