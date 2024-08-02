@@ -13,7 +13,7 @@ export default function Synonyms(props) {
         <div>
           {props.synonyms.map(function (synonym, index) {
             return (
-              <div key={index} className="result-text synonym-word">
+              <div key={index} className="synonym-word">
                 {synonym}{" "}
               </div>
             );
