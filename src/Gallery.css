@@ -6,7 +6,6 @@
   transition: all 150ms ease-in-out;
 }
 
-.Gallery a img:hover,
-.Gallery a img:active {
+.Gallery a img:hover {
   transform: scale(1.05);
 }
