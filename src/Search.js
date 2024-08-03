@@ -57,7 +57,6 @@ export default function Search() {
           autoFocus
           onChange={handleKeywordChange}
         />
-        <input type="submit" className="search-btn" value="Search" />
       </form>
       <Result result={result} />
       <Gallery photos={photos}/>

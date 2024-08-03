@@ -10,13 +10,14 @@
 
 .App {
   max-width: 600px;
-  margin: 30px auto;
+  margin: 50px auto;
   padding: 0 10px;
 }
 
 .App-header {
   font-size: 70px;
   font-weight: 500;
+  line-height: 1.2;
 }
 
 .App-header a {

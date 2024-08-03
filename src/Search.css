@@ -1,7 +1,7 @@
 form {
   display: grid;
   width: 100%;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 1fr;
   margin: 10px 0 50px;
 }
 
@@ -10,6 +10,9 @@ form {
   border-bottom: 1px solid var(--off-black);
   padding: 6px;
   color: var(--red);
+  font-size: 46px;
+  font-weight: 500;
+  line-height: 1;
 }
 
 .input:focus-visible {
