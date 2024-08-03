@@ -1,0 +1,12 @@
+.Gallery {
+  padding: 0 10px;
+}
+
+.Gallery a img {
+  transition: all 150ms ease-in-out;
+}
+
+.Gallery a img:hover,
+.Gallery a img:active {
+  transform: scale(1.05);
+}

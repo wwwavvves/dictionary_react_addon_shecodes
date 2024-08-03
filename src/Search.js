@@ -1,11 +1,21 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./Search.css";
 import Result from "./Result";
+import Gallery from "./Gallery";
+import "./Search.css";
 
 export default function Search() {
   const [keyword, setKeyword] = useState("");
   const [result, setResult] = useState(null);
+  const [photos, setPhotos] = useState(null);
+
+  function handleImages(response) {
+    if (response) {
+      setPhotos(response.data.photos);
+    } else {
+      return null;
+    }
+  }
 
   function handleResponse(response) {
     if (response.data.status === "not_found") {
@@ -23,6 +33,11 @@ export default function Search() {
       let apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${keyword}&key=${apiKey}`;
 
       axios.get(apiUrl).then(handleResponse);
+
+      let imagesApiKey = "68a066fb34dtb3fc9d4875c8d3bo09b6";
+      let imagesApiUrl = `https://api.shecodes.io/images/v1/search?query=${keyword}&key=${imagesApiKey}`;
+
+      axios.get(imagesApiUrl).then(handleImages);
     } else {
       alert("Please type a word");
     }
@@ -45,6 +60,7 @@ export default function Search() {
         <input type="submit" className="search-btn" value="Search" />
       </form>
       <Result result={result} />
+      <Gallery photos={photos}/>
     </div>
   );
 }
