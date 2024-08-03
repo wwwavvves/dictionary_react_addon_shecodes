@@ -1,6 +1,5 @@
 import React from "react";
 import Meaning from "./Meaning";
-import Gallery from "./Gallery";
 import "./Result.css";
 
 export default function Result(props) {
