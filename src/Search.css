@@ -10,9 +10,10 @@ form {
   border-bottom: 1px solid var(--off-black);
   padding: 6px;
   color: var(--red);
-  font-size: 34px;
+  font-size: 40px;
   font-weight: 500;
   line-height: 1;
+  width: 100%;
 }
 
 .input:focus-visible {
